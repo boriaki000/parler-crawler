@@ -1,0 +1,4 @@
+googletrans==4.0.0-rc1
+pytz==2020.5
+parler==1.0.1
+python-lambda-local==0.1.12

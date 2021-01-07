@@ -1,5 +1,4 @@
 import unittest
-import index
 
 
 class TestHandlerCase(unittest.TestCase):

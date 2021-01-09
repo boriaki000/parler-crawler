@@ -73,6 +73,9 @@ def get_posts(user_id, basetime, time_distance, pytz_timezone, trans_mode):
             parlerData = client.getPostsOfUserId(user_id, 20)
             result = []
             for post in parlerData['posts']:
+                if not post['body'] and post['depth'] != '0':
+                    continue
+
                 created_at = datetime.strptime(str(post['createdAt']), '%Y%m%d%H%M%S')
                 distance = basetime - created_at
                 if distance.days == 0 and distance.seconds < time_distance:
